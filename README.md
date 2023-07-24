@@ -17,7 +17,7 @@ page_url: the url of the page.
 
 links: the existing pages links in every page.  
 
-After that, we run the google page rank algorithm and sort all the pages scores based on their ranks and save them again into another csv file.(see **psxhax_pages_rank.py**)  
+After that, we run the google page rank algorithm and sort all the pages based on their rank scores and save them again into another csv file.(see **psxhax_pages_rank.py**)  
 
 We obtain then the ranked_psxhax_pages.csv file with the following added column:  
 
