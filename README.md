@@ -29,7 +29,7 @@ In the second part, we are going to work with PySpark and graphframes to compute
 
 In order to run this projet you need to have:  
 
-   Three working virtual machines with linux os installed on each one of them (i used lubuntu os).  
+   Working virtual machines with linux os installed on each one of them (i used lubuntu os).  
    
    Fully configured and installed hadoop in cluster mode (i used hadoop 3.3.4).  
    
