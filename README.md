@@ -17,13 +17,13 @@ page_url: the url of the page.
 
 links: the existing pages links in every page.  
 
-After that, we run the google page rank algorithm and sort all the pages based on their rank scores and save them again into another csv file.(see **psxhax_pages_rank.py**)  
+After that, we ran the google page rank algorithm and sorted all the pages based on their rank scores and saved them again into another csv file.(see **psxhax_pages_rank.py**)  
 
-We obtain then the ranked_psxhax_pages.csv file with the following added column:  
+We obtained then the ranked_psxhax_pages.csv file with the following added column:  
 
 pagerank: the rank of the page.  
 
-In the second part, we are going to work with PySpark and graphframes to compute pages ranks and compare the obtained results.(see **Setup and Usage**)
+In the second part, we are going to work with PySpark and graphframes to compute pages ranks and compare them with the obtained results.(see **Setup and Usage**)
 
 # Prerequisites
 
