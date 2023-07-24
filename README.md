@@ -55,7 +55,7 @@ To set up the project locally, follow these steps:
 
 1) Clone the repository: git clone <https://github.com/Znullptr/PageRankSpark>
 
-2) Copy page_rank_spark.py script and psxhax_pages_info.csv to your hdfs.
+2) Copy psxhax_pages_rank_spark.py script and psxhax_pages_info.csv to your hdfs.
 
 3) Download graphframes latest jar version from this url <https://spark-packages.org/package/graphframes/graphframes> and copy it to the jars folder existing in the spark home installation directory.
 
