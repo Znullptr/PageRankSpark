@@ -61,12 +61,12 @@ To set up the project locally, follow these steps:
 
    Please modify this command in order to match your environnement resources and your hdfs path to your python script.
    
-6) Once it's successfully completed, open your yarn interface and visualize the spark job progress:
+6) Open your yarn interface and visualize the spark job progress:
   <p>
    <img width="800" height="500" src="https://github.com/Znullptr/PageRankSpark/blob/main/images/yarn_interface_output.jpg">
   </p>  
 
-7) Open your hdfs interface and download the output csv file:
+7) Once it's successfully completed, open your hdfs interface and download the output csv file:
   <p>
    <img width="800" height="500" src="https://github.com/Znullptr/PageRankSpark/blob/main/images/hdfs_interface_output.jpg">
     </p>  
