@@ -25,13 +25,13 @@ for index, row in pages_info_df.iterrows():
                 G.add_edge(src_page_id, dest_page_id)
 
 # Run the PageRank algorithm
-pagerank_scores = nx.pagerank(G, max_iter=50, alpha=0.15)
+pagerank_scores = nx.pagerank(G, max_iter=50, alpha=0.85)
 
 # Assign the PageRank scores to the psxhax pages dataframe
 pages_info_df['page_rank'] = [pagerank_scores[page_id] for page_id in pages_info_df['page_id']]
 
 # Sort the psxhax pages based on PageRank scores
-ranked_pages_df = pages_info_df.sort_values(by='page_rank', ascending=False)
+ranked_pages_df = pages_info_df.sort_values(by=['page_rank', 'page_id'], ascending=[False, True])
 
 # Save the ranked psxhax pages information to CSV
 ranked_pages_df.to_csv('ranked_psxhax_pages.csv', index=False)
