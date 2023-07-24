@@ -8,14 +8,20 @@ For this project we used PSXHAX website as an example. PSXHAX is a website that 
  For simplicity, i splitted this project into two main parts. In the first part, we extracted useful informations about all the pages (threads) that exists in PSXHAX and saved them into a csv file.(see **psxhax_pages_extract.py**)  
 
 The psxhax_pages_info.csv file consists of 4 columns: 
-
+<ul>
+ <li>
   page_id: the id of the page.  
-  
+  </li>
+ <li>
   page_title: the title of the page.  
-  
+  </li>
+ <li>
   page_url: the url of the page.  
-  
+   </li>
+  <li>
   links: the existing pages links in every page.  
+  </li>
+</ul>  
 
 After that, we ran the google page rank algorithm and sorted all the pages based on their rank scores and saved them again into another csv file.(see **psxhax_pages_rank.py**)  
 
@@ -27,16 +33,22 @@ In the second part, we are going to work with PySpark and graphframes to compute
 
 # Prerequisites
 
-In order to run this projet you need to have:  
+In order to run this projet you need to have: 
 
+<ul>
+ <li>
    3 or more working virtual machines with linux os installed on each one of them (i used lubuntu os).  
-   
+  </li>
+ <li>
    Fully configured and installed hadoop in cluster mode (i used hadoop 3.3.4).  
-   
+   </li>
+   <li>
    Apache Spark installed on top of hadoop (i used spark 3.4.1).  
-   
+     </li>
+   <li>
    Python 3 or later installed.  
- 
+     </li>
+ </ul>
 
 # Setup and Usage
 To set up the project locally, follow these steps:  
@@ -56,7 +68,7 @@ To set up the project locally, follow these steps:
     --executor-memory 512m \
     --executor-cores 1 \
     --num-executors 2 \
-    hdfs://Master:9000/user/hadoop/py_scripts/page_rank_spark.py \
+    hdfs://Master:9000/user/hadoop/py_scripts/psxhax_pages_rank_spark.py \
     inputs/psxhax_pages_info.csv
 
    Please modify this command in order to match your environnement resources and your hdfs path to your python script.
@@ -74,5 +86,22 @@ To set up the project locally, follow these steps:
 8) Compare the new results with your previous obtained results.
 
 
-# Conclusion
-   
+# Conclusion  
+
+When comparing obtained results from both CSV files, we observe nearly identical results with only minor differences. These variations could be attributed to several factors:
+<ul>
+<li>
+Load Balancing: Different nodes in the cluster may have different data partitions, and the workload might not be evenly distributed. Load balancing ensures that each node receives a balanced workload, but the actual distribution might still introduce small variations in the final results.
+</li>
+ <li>
+Communication Overhead: The communication between nodes during the iterative PageRank calculations may introduce some overhead. The time taken to transfer data between nodes and perform aggregation operations can vary, leading to slight variations in results.
+<li>
+Random Initialization: Some PageRank implementations, including Spark's GraphFrames, use random initialization for the PageRank scores. The random seed and the order in which the random numbers are generated can influence the final results.
+</li>
+ <li>
+Convergence Criteria: Different nodes may converge at different rates, leading to slight variations in the number of iterations performed or the final PageRank scores.
+</li>
+ <li>
+Floating-point precision:  Spark's GraphFrames may use slightly different floating-point precision during their calculations than NetworkX's pagerank(), which could lead to minor variations in the results.
+</li>
+</ul>
