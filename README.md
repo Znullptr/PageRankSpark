@@ -9,13 +9,13 @@ For this project we used PSXHAX website as an example. PSXHAX is a website that 
 
 The psxhax_pages_info.csv file consists of 4 columns: 
 
-page_id: the id of the page.  
-
-page_title: the title of the page.  
-
-page_url: the url of the page.  
-
-links: the existing pages links in every page.  
+  page_id: the id of the page.  
+  
+  page_title: the title of the page.  
+  
+  page_url: the url of the page.  
+  
+  links: the existing pages links in every page.  
 
 After that, we ran the google page rank algorithm and sorted all the pages based on their rank scores and saved them again into another csv file.(see **psxhax_pages_rank.py**)  
 
@@ -29,13 +29,13 @@ In the second part, we are going to work with PySpark and graphframes to compute
 
 In order to run this projet you need to have:  
 
- 3 working virtual machines with linux os installed on each one of them (i used lubuntu os).  
- 
- Fully configured and installed hadoop in cluster mode (i used hadoop 3.3.4).  
- 
- Apache Spark installed on top of hadoop (i used spark 3.4.1).  
- 
- Python 3 or later installed.  
+   3 working virtual machines with linux os installed on each one of them (i used lubuntu os).  
+   
+   Fully configured and installed hadoop in cluster mode (i used hadoop 3.3.4).  
+   
+   Apache Spark installed on top of hadoop (i used spark 3.4.1).  
+   
+   Python 3 or later installed.  
  
 
 # Setup and Usage
