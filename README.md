@@ -59,7 +59,7 @@ To set up the project locally, follow these steps:
     hdfs://Master:9000/user/hadoop/py_scripts/page_rank_spark.py \
     inputs/psxhax_pages_info.csv
 
-   Please modify the command in order to match your environnement resources and your hdfs path to your pyton script.
+   Please modify this command in order to match your environnement resources and your hdfs path to your python script.
    
 6) Open your yarn interface and visualize the spark job progress:
   <p>
