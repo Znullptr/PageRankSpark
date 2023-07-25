@@ -2,7 +2,7 @@
 This project aims to rank web pages based on the google page rank algorithm utilizing big data technologies such as Apache Spark.
 
 # Description
-For this project we used PSXHAX website as an example. PSXHAX is a website that focus on bringing news about ps4 and ps5 jailbreaking scene and has around 444 pages in the time this repository is deployed, Every page contains several threads and in this context we are trying to extract and  rank all the threads that exists in the website using google page rank algorithm logic.
+For this project we used PSXHAX website as an example. PSXHAX is a website that focus on bringing news about ps4 and ps5 jailbreaking scene and has around 414 pages in the time this repository is deployed, Every page contains several threads and in this context we are trying to extract and  rank all the threads that exists in the website using google page rank algorithm logic.
 
 # Overview
  For simplicity, i splitted this project into two main parts. In the first part, we extracted useful informations about all the pages (threads) that exists in PSXHAX and saved them into a csv file.(see **psxhax_pages_extract.py**)  
